@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palíndromo</title>
+    <link rel="icon" href="imagenes/andrix.png"/>
+    <body style="background-color:#00fff2;"></body>
+    <script>
+        ;
+        var palabra;
+            function iniciar(){
+            var valor = document.getElementById("palabra").value;
+            alert('La cadena capturada es: '+valor);
+            }
+            //Comprobar si es o no es palíndromo//
+            var cadena=prompt("Introduce un texto para comprobar si la palabra es un Palíndromo");
+            var numchar=cadena.length;
+            //Ponemos la cadena en minusculas//
+            cadena=cadena.toLowerCase();
+            var j;
+            var car;
+            var salida="";
+            var cadena_espac="";
+            var cadena_reves="";
+            for(i= 0; i< numchar;i++){
+                car=cadena.charAt(i);
+                //Si el caracter es un espacio//
+                if(car!="") {
+                    cadena_espac+=car;
+                    cadena_reves=car+cadena_reves;
+                }
+            }
+            if(cadena_espac==cadena_reves){
+                alert(+car) ("El texto es un palíndromo"+car);
+            }
+            else{
+                alert(+car) ("El texto no es un palíndromo"+car);
+            }
+    </script>
+</head>
+<body >
+    <form  name="Palindromo" method="GET">
+        <label>Deme una palabra:</label>
+        <input type="text"  id="palabra" placeholder="Solo Letras">
+        <input type="submit" value="Verificar" onclick="iniciar();">
+    </form>
+</body>
+</html>
